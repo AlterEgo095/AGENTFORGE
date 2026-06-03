@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: 794px 1123px; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 794px; height: 1123px; overflow: hidden; background: #f4f4f2; }
+
+  .cover {
+    position: relative;
+    width: 794px;
+    height: 1123px;
+    background: #f4f4f2;
+  }
+
+  /* Layer 1: Background - Grid pattern */
+  .bg-layer {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(37,115,141,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(37,115,141,0.04) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  .bg-watermark {
+    position: absolute;
+    right: 30px;
+    top: 100px;
+    font-family: 'Inter', sans-serif;
+    font-size: 160pt;
+    font-weight: 900;
+    color: rgba(37,115,141,0.04);
+    line-height: 1;
+    letter-spacing: -4px;
+  }
+
+  /* Layer 2: Structure */
+  .struct-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+  .left-anchor-line {
+    position: absolute;
+    left: 95px;
+    top: 112px;
+    width: 6px;
+    height: 900px;
+    background: #25738d;
+  }
+  .meta-separator {
+    position: absolute;
+    left: 140px;
+    top: 790px;
+    width: 280px;
+    height: 1px;
+    background: rgba(37,115,141,0.4);
+  }
+
+  /* Layer 3: Content */
+  .content-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+  }
+  .kicker {
+    position: absolute;
+    left: 140px;
+    top: 168px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16pt;
+    font-weight: 400;
+    letter-spacing: 3pt;
+    color: rgba(32,31,29,0.6);
+    text-transform: uppercase;
+  }
+  .hero-title {
+    position: absolute;
+    left: 140px;
+    top: 260px;
+    font-family: 'Inter', sans-serif;
+    font-size: 52pt;
+    font-weight: 900;
+    color: #201f1d;
+    line-height: 1.15;
+    max-width: 560px;
+  }
+  .summary {
+    position: absolute;
+    left: 140px;
+    top: 500px;
+    font-family: 'Inter', sans-serif;
+    font-size: 17pt;
+    font-weight: 400;
+    color: rgba(32,31,29,0.85);
+    line-height: 1.6;
+    max-width: 460px;
+  }
+  .meta-block {
+    position: absolute;
+    left: 140px;
+    top: 810px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18pt;
+    font-weight: 400;
+    color: #7e7b74;
+    line-height: 2.0;
+  }
+  .footer {
+    position: absolute;
+    left: 140px;
+    bottom: 60px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12pt;
+    font-weight: 400;
+    letter-spacing: 2pt;
+    color: rgba(32,31,29,0.5);
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="bg-layer">
+    <div class="bg-grid"></div>
+    <div class="bg-watermark">AF</div>
+  </div>
+  <div class="struct-layer">
+    <div class="left-anchor-line"></div>
+    <div class="meta-separator"></div>
+  </div>
+  <div class="content-layer">
+    <div class="kicker">Blueprint Architectural</div>
+    <div class="hero-title">Agent<br>Forge</div>
+    <div class="summary">Plateforme unifiee d'agents IA hyper-scalables. Un kernel MoA, 7 configurations d'agents. Architecture complete, mecanismes secrets et roadmap de production.</div>
+    <div class="meta-block">
+      Version 1.0<br>
+      Juin 2026<br>
+      Document Confidentiel
+    </div>
+    <div class="footer">Architecture &middot; Orchestration &middot; Scale</div>
+  </div>
+</div>
+</body>
+</html>

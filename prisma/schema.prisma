@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  plan      String   @default("free")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  projects  Project[]
+}
+
+model Project {
+  id        String   @id @default(cuid())
+  name      String
+  agentType String
+  status    String   @default("active")
+  config    String   @default("{}")
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sessions  GenerationSession[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model GenerationSession {
+  id           String   @id @default(cuid())
+  prompt       String
+  result       String   @default("")
+  qualityScore Float    @default(0)
+  modelUsed    String   @default("")
+  costCents    Int      @default(0)
+  durationMs   Int      @default(0)
+  projectId    String
+  project      Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+}
+
+model AgentConfig {
+  id                 String @id @default(cuid())
+  type               String @unique
+  name               String
+  dagDefinition      String @default("{}")
+  reflectionCriteria String @default("{}")
+  modelRouting       String @default("{}")
+  threshold          Float  @default(0.95)
+  description        String @default("")
+}

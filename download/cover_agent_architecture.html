@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page {
+    size: 794px 1123px;
+    margin: 0;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 794px;
+    height: 1123px;
+    overflow: hidden;
+    font-family: 'Liberation Serif', 'Carlito', serif;
+  }
+  .cover {
+    width: 794px;
+    height: 1123px;
+    background: linear-gradient(135deg, #2d1b69 0%, #5130b5 40%, #7b5ea7 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .cover-accent-line {
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    width: 80px;
+    height: 3px;
+    background: rgba(255,255,255,0.4);
+  }
+  .cover-accent-line-2 {
+    position: absolute;
+    bottom: 180px;
+    right: 60px;
+    width: 120px;
+    height: 3px;
+    background: rgba(255,255,255,0.25);
+  }
+  .cover-geometric {
+    position: absolute;
+    top: 80px;
+    right: 80px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgba(255,255,255,0.1);
+    border-radius: 50%;
+  }
+  .cover-geometric-2 {
+    position: absolute;
+    bottom: 100px;
+    left: 80px;
+    width: 150px;
+    height: 150px;
+    border: 1.5px solid rgba(255,255,255,0.07);
+    border-radius: 12px;
+    transform: rotate(15deg);
+  }
+  .content-area {
+    text-align: center;
+    padding: 0 80px;
+    max-width: 640px;
+  }
+  .kicker {
+    font-family: 'Carlito', sans-serif;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: 0.6;
+    margin-bottom: 30px;
+  }
+  .title {
+    font-family: 'Liberation Serif', serif;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  .subtitle {
+    font-family: 'Carlito', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.5;
+    opacity: 0.85;
+    margin-bottom: 40px;
+  }
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: rgba(255,255,255,0.5);
+    margin: 0 auto 30px auto;
+  }
+  .summary {
+    font-family: 'Carlito', sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    opacity: 0.65;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .meta {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    width: 100%;
+    font-family: 'Carlito', sans-serif;
+    font-size: 11px;
+    opacity: 0.45;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="cover">
+  <div class="cover-accent-line"></div>
+  <div class="cover-accent-line-2"></div>
+  <div class="cover-geometric"></div>
+  <div class="cover-geometric-2"></div>
+
+  <div class="content-area">
+    <div class="kicker">Synthese Actionnable</div>
+    <div class="title">Architecture des Agents IA</div>
+    <div class="subtitle">Agent Developpeur & Agent SLIDES<br/>Orchestration, RAG, Memoire & Securite</div>
+    <div class="divider"></div>
+    <div class="summary">
+      Extraction et synthese des principes fondamentaux, patterns d'orchestration,
+      architectures de reference et strategies de production issus du Compilateur
+      d'Architecture Intelligente, appliques a la conception de deux agents IA de classe mondiale.
+    </div>
+  </div>
+
+  <div class="meta">Z.ai &mdash; Juin 2026</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+[
+  {
+    "testName": "failover-speed",
+    "timestamp": "2026-06-11T06:16:37.738Z",
+    "metrics": {
+      "avgFailoverTimeMs": 15,
+      "maxFailoverTimeMs": 17,
+      "minFailoverTimeMs": 15,
+      "failoverCount": 50
+    }
+  },
+  {
+    "testName": "circuit-breaker-activation",
+    "timestamp": "2026-06-11T06:16:37.752Z",
+    "metrics": {
+      "timeToActivateMs": 0,
+      "consecutiveFailures": 3,
+      "isAvailable": 0
+    }
+  },
+  {
+    "testName": "circuit-breaker-recovery",
+    "timestamp": "2026-06-11T06:16:38.060Z",
+    "metrics": {
+      "lastFailureAt": 1781158598060,
+      "timeSinceFailureMs": 0,
+      "wouldRecoverNow": 0,
+      "simulatedRecoveryTimeMs": 60000,
+      "circuitBreakerResetMs": 60000
+    }
+  },
+  {
+    "testName": "single-vs-failover",
+    "timestamp": "2026-06-11T06:16:39.596Z",
+    "metrics": {
+      "avgSingleProviderMs": 15,
+      "avgFailoverChainMs": 15,
+      "overheadPercent": 1
+    }
+  },
+  {
+    "testName": "moa-strategy-performance",
+    "timestamp": "2026-06-11T06:16:40.811Z",
+    "metrics": {
+      "avgMoaParallelMs": 20,
+      "avgSingleProviderMs": 20,
+      "moaEfficiencyRatio": 1,
+      "providerCount": 3
+    }
+  },
+  {
+    "testName": "concurrent-10",
+    "timestamp": "2026-06-11T06:16:47.361Z",
+    "metrics": {
+      "concurrency": 10,
+      "totalDurationMs": 20,
+      "avgPerRequestMs": 2,
+      "successRate": 100
+    }
+  },
+  {
+    "testName": "concurrent-50",
+    "timestamp": "2026-06-11T06:16:47.378Z",
+    "metrics": {
+      "concurrency": 50,
+      "totalDurationMs": 15,
+      "avgPerRequestMs": 0,
+      "successRate": 100,
+      "throughputPerSec": 3333.33
+    }
+  },
+  {
+    "testName": "concurrent-100",
+    "timestamp": "2026-06-11T06:16:47.389Z",
+    "metrics": {
+      "concurrency": 100,
+      "totalDurationMs": 10,
+      "avgPerRequestMs": 0,
+      "successRate": 100,
+      "throughputPerSec": 10000
+    }
+  }
+]

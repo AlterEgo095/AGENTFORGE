@@ -59,4 +59,4 @@ server.log
 .idea/
 .vscode/
 # Z scripts
-.zscripts/
+.zscripts/node_modules/\ndist/\n.next/\ndev.log\nserver.log\ndb/\n*.db

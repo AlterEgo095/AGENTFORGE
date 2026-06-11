@@ -1,0 +1,28 @@
+{
+  "name": "@alterego/orchestrator",
+  "version": "1.0.0",
+  "description": "ALTER EGO OS — Super Orchestrator: the BRAIN that receives missions, plans, delegates, and integrates all subsystems",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@alterego/event-bus": "workspace:*",
+    "@alterego/kernel": "workspace:*",
+    "@alterego/workflow": "workspace:*",
+    "@alterego/memory": "workspace:*",
+    "@alterego/knowledge": "workspace:*",
+    "@alterego/reflection": "workspace:*",
+    "@alterego/learning": "workspace:*",
+    "@alterego/cost-optimizer": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "vitest": "^3"
+  },
+  "license": "MIT"
+}

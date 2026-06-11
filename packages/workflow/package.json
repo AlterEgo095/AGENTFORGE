@@ -1,0 +1,21 @@
+{
+  "name": "@alterego/workflow",
+  "version": "1.0.0",
+  "description": "ALTER EGO OS — Workflow Engine: DAG runtime with parallel execution, checkpoints, and quality gates",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@alterego/event-bus": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "vitest": "^3"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@alterego/plugin-loader",
+  "version": "1.0.0",
+  "description": "ALTER EGO OS — Plugin Loader: dynamic loading, registration, and lifecycle management for agent plugins",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@alterego/event-bus": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "vitest": "^3"
+  },
+  "license": "MIT"
+}
